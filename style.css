@@ -1,0 +1,168 @@
+body{
+	font-family: Arial;
+}
+.select-container {
+	position: relative;
+	width: 500px;
+	margin: 30px auto 0;
+}
+.select-option {
+	border: 1px solid #bbb;
+	padding: 15px;
+	border-radius: 3px;
+	position: relative;
+	cursor: pointer;
+	background: #fff;
+	z-index: 2;
+}
+.select-option .select-label {
+
+}
+.select-option .select-arrow {
+	position: absolute;
+	width: 46px;
+	height: 46px;
+	border: 1px solid #b5b5b5;
+	top:  0px;
+	right: 0px;
+    text-align: center;
+    line-height: 46px;
+}
+.all-options {
+	position: absolute;
+	top: 47px;
+	width: 498px;
+	height: 285px;
+	overflow-y: scroll;
+	border: 1px solid #b5b5b5;
+	border-radius: 0 0 3px 3px;
+	z-index: 1;
+	padding-top: 10px;
+	transition: all ease 0.7s;
+}
+.hidden {
+	height: 0px;
+	padding-top: 0;
+}
+.all-options .single-option {
+	display: table;
+	width: 100%;
+	cursor: pointer;
+	background: #fff;
+}
+.all-options .single-option:hover {
+	background: #d7d7d7;
+}
+.all-options .single-option .imagem, .all-options .single-option .dados {
+	display: table-cell;
+	height: 80px;
+	border-bottom: 1px solid #ccc;
+}
+.all-options .single-option .imagem {
+	width: 115px;
+	text-align: center;
+}
+.all-options .single-option .imagem img {
+	height: 100%;
+}
+.all-options .single-option .dados {
+	vertical-align: middle;
+	padding-left: 20px;
+}
+
+
+.container-pokemons {
+	width: 500px;
+	margin: 50px auto 0;
+}
+.container-pokemons .single-pokemon {
+	display: table;
+	width: 100%;
+	border-bottom: 1px solid #ccc;
+	position: relative;
+}
+.container-pokemons .single-pokemon .remover {
+	display: block;
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	background-image: url(close_red.png);
+	background-size: 25px 25px;
+	right: 6px;
+	top: 40%;
+	cursor: pointer;
+}
+.container-pokemons .single-pokemon:last-child {
+	border-bottom: 0px;
+}
+.container-pokemons .single-pokemon .imagem, .container-pokemons .single-pokemon .dados {
+	display: table-cell;
+	height: 96px;
+	vertical-align: middle;
+}
+.container-pokemons .single-pokemon .imagem {
+	width: 160px;
+}
+.all-options .single-option .imagem img {
+	height: 100%;
+}
+.tipos span {
+	background: #78C850;
+    border-radius: 3px;
+    padding: 2px 6px;
+    font-size: 12px;
+    color: #fff;
+}
+.codigo {
+	display: none;
+}
+h2 {
+	text-align: center;
+}
+.times-container {
+	width: 760px;
+	margin: 50px auto 0;
+}
+.time {
+	display: table;
+	width: 100%;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 40px;
+	margin-bottom: 40px;
+}
+.nome-time {
+	text-align: left;
+	font-size: 22px;
+	padding-left: 15px;
+	position: relative;
+}
+.nome-time img {
+	position: absolute;
+	cursor: pointer;
+}
+.nome-time img.remove {
+	top: -3px;
+	right: 5px;
+}
+.nome-time img.edit {
+	top: 0;
+	right: 42px;
+}
+.time .pokemon {
+	width: 16.6%;
+	display: table-cell;
+	text-align: center;
+}
+.time .pokemon .nome {
+	font-weight: bold;
+	padding-bottom: 10px;
+}
+
+label {
+	display: inline-block;
+	width: 150px;
+}
+
+.btn-enviar {
+
+}
