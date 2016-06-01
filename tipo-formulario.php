@@ -8,7 +8,7 @@
 ?>
 
 <h1>Adicionar Tipo</h1>
-<form action="adiciona-produto.php" method="POST">
+<form action="adiciona-tipo.php" method="POST">
 	<table class="table table-responsive">
 		<tr>
 			<td>Nome</td>

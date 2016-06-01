@@ -46,12 +46,19 @@
 	}
 
 	function removeProduto($conexao, $id) {
-		$query = "DELETE FROM produtos WHERE id = {$id}";
+		$query = "DELETE FROM pokemon WHERE id = {$id}";
 		return mysqli_query($conexao, $query);
 	}
-
+/*
 	function buscaProduto($conexao, $id) {
 	    $query = "select * from produtos where id = {$id}";
+	    $resultado = mysqli_query($conexao, $query);
+	    return mysqli_fetch_assoc($resultado);
+	}
+*/
+
+	function buscaPokemon($conexao, $id) {
+	    $query = "select * from pokemon where id = {$id}";
 	    $resultado = mysqli_query($conexao, $query);
 	    return mysqli_fetch_assoc($resultado);
 	}
