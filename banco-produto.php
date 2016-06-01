@@ -24,7 +24,7 @@
 
 	    return $resultadoDaInsercao;
 	}
-
+/*
 	function listaProdutos ($conexao){
 		$produtos = array();
 		$resultado = mysqli_query($conexao, "SELECT p.*, c.nome as categoria_nome FROM produtos as p JOIN categorias as c on p.categoria_id = c.id");
@@ -34,6 +34,15 @@
 		}
 
 		return $produtos;
+	}
+*/
+	function listaPokemons ($conexao){
+		$pokemons = array();
+		$resultado = mysqli_query($conexao, "SELECT id,nome, imagem, descricao, tipo1, tipo2 FROM pokemon");
+		while($pokemon = mysqli_fetch_assoc($resultado)){
+			array_push($pokemons, $pokemon);
+		}
+		return $pokemons;
 	}
 
 	function removeProduto($conexao, $id) {

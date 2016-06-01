@@ -3,7 +3,6 @@
 	include("cabecalho.php");
 	include("conecta.php");
 	include("banco-tipo.php");
-	include("logica-usuario.php");
 
 	verificaUsuario();
 

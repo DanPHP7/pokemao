@@ -1,6 +1,5 @@
 <?php  
 	include("cabecalho.php"); 
-	include ("logica-usuario.php");
 ?>
 
 <?php if(isset($_GET["login"]) && $_GET["login"]==true) { ?>
@@ -15,7 +14,7 @@
 	<p class="alert-danger">Você não tem acesso a esta funcionalidade!</p>
 <?php }?>
 
-	<h1>Bem vindo!</h1>
+	<h1>Sistema Pokémon</h1>
 	
 	<?php if(usuarioEstaLogado()) { ?>
 
@@ -24,23 +23,32 @@
 	<?php } else { ?>
 
 	<br>
-	<p> "Sistema para cadastro de Produtos"</p>
+	<p> "Sistema para Compartilhamento de Pokémons"</p>
 
 	<h2>Login</h2>
 	<form action="login.php" method="post">
-		<table class="table">
-			<tr>
-				<td>Usuario</td>
-				<td><input class="form-control" type="text" name="UserName"/></td>
-			</tr>
-			<tr>
-				<td>Senha</td>
-				<td><input class="form-control" type="password" name="senha" /></td>
-			</tr>
-			<tr>
-				<td><button class="btn btn-primary">Login</button></td>
-			</tr>
-		</table>
+			<div class="form-horizontal col-md-offset-1">
+				<div class="form-group col-md-12">
+					<div class="col-md-4">
+						<label>Usuario:</label>
+					</div>
+					<div class="col-md-4">
+						<input class="form-control" type="text" name="UserName"/>
+					</div>
+				</div>
+				<div class="form-group col-md-12">
+					<div class="col-md-4">
+						<label>Senha:</label>
+					</div>
+					<div class="col-md-4">
+						<input class="form-control" type="password" name="senha" />
+					</div>
+				</div>
+			</div>
+			<div class="form-groucol-md-12">
+					<center><button class="btn btn-primary">Login</button></center>
+					
+			</div>
 	</form>
 <?php } ?>
 <?php include("rodape.php") ?>

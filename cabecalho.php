@@ -1,6 +1,7 @@
 <html>
 <head>
-    <title>Minha loja</title>
+    <?php include('logica-usuario.php');?>
+    <title>Sistema de compartilhamento Pokémon</title>
     <meta charset="utf-8">
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/loja.css" rel="stylesheet" />
@@ -8,10 +9,10 @@
 
 <body>
 
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-            	<a href="index.php" class="navbar-brand">Minha Loja</a></div>
+            	<a href="index.php" class="navbar-brand">Index Pokemao</a></div>
         	</div>
         <div>
             <ul class="nav navbar-nav">
@@ -22,6 +23,17 @@
                 <!--<li><a href="#">Sobre</a></li> -->
             </ul>
         </div>
+        <?php 
+
+                if(usuarioEstaLogado()) { ?>
+                    <div class='col-md-02 col-md-offset-10'>
+                            <ul class='nav navbar-nav'>
+                                <li><a href='logout.php'>Logout</a></li>
+                            </ul>
+                         </div>
+        <?php  }?>
+
+        
     </div>
 
     <div class="container">

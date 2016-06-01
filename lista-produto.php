@@ -2,7 +2,9 @@
 	include("cabecalho.php");
 	include("conecta.php");
 	include("banco-produto.php");
-	include("banco-categoria.php");
+
+	verificaUsuario();
+
 ?>
 
 <?php
@@ -17,23 +19,24 @@
 
 
 <?php
-	$produtos = listaProdutos($conexao);
+	$pokemons = listaPokemons($conexao);
 ?>
 
 <table class="table table-striped table-bordered">
 
 <?php 
-	foreach ($produtos as $produto):
+	foreach ($pokemons as $pokemon):
  ?>
  		<tr>
-			<td><?= $produto['nome'] ?></td>
-			<td><?= $produto['preco'] ?></td>
-			<td><?= substr($produto['descricao'], 0, 40) ?></td>
-			<td><?= $produto['categoria_nome'] ?></td>
-			<td><a class="btn btn-primary" href="produto-altera-formulario.php?id=<?=$produto['id']?>">alterar</a>
+			<td><?= $pokemon['nome'] ?></td>
+			<td><?= $pokemon['imagem'] ?></td>
+			<td><?= substr($pokemon['descricao'], 0, 40) ?></td>
+			<td><?= $pokemon['tipo1'] ?></td>
+			<td><?= $pokemon['tipo2'] ?></td>
+			<td><a class="btn btn-primary" href="#">alterar</a>
 			<td>
 				<form action="remove-produto.php" method="post">
-				 	<input type="hidden" name="id" value="<?=$produto['id']?>" />
+				 	<input type="hidden" name="id" value="<?=$pokemon['id']?>" />
 					<button class="btn btn-danger">remover</button>
 				</form>
 			</td>

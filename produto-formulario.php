@@ -2,7 +2,6 @@
 
 	include("cabecalho.php");
 	include("conecta.php");
-	include("logica-usuario.php");
 
 	verificaUsuario();
 
