@@ -10,7 +10,7 @@
 
 ?>
 
-<h1>Formulário de Cadastro</h1>
+<h1>Adicionar Pokémon</h1>
 <form action="adiciona-pokemon.php" method="POST">
 	<table class="table table-responsive">
 		<tr>

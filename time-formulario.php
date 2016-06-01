@@ -10,7 +10,7 @@
 
 ?>
 
-<h1>Formulário de Cadastro</h1>
+<h1>Criar Time</h1>
 
 <form action="adiciona-time.php" method="POST">
 	<table class="table table-responsive">

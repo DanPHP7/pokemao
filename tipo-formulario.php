@@ -7,7 +7,7 @@
 
 ?>
 
-<h1>Formulário de Cadastro</h1>
+<h1>Adicionar Tipo</h1>
 <form action="adiciona-produto.php" method="POST">
 	<table class="table table-responsive">
 		<tr>

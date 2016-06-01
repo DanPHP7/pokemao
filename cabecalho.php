@@ -16,11 +16,10 @@
         	</div>
         <div>
             <ul class="nav navbar-nav">
-                <li><a href="produto-formulario.php">Adiciona Tipo</a></li>
-                <li><a href="pokemon-formulario.php">Adiciona Pokémon</a></li>
+                <li><a href="tipo-formulario.php">Adicionar Tipo</a></li>
+                <li><a href="pokemon-formulario.php">Adicionar Pokémon</a></li>
                 <li><a href="time-formulario.php">Criar Time</a></li>
-                <li><a href="lista-produto.php">Produtos</a></li>
-                <!--<li><a href="#">Sobre</a></li> -->
+                <li><a href="lista-produto.php">Pokémons</a></li>
             </ul>
         </div>
         <?php 
