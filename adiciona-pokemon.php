@@ -7,7 +7,7 @@
 	verificaUsuario();
 
 	$nome = $_POST['nome'];
-	$url = $_POST['url'];
+	$url = $_POST['imagem'];
 	$descricao = $_POST['descricao'];
 	$tipo1 = $_POST['tipo1'];
 	$tipo2 = $_POST['tipo2'];

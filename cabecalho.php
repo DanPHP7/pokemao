@@ -3,6 +3,7 @@
     <?php include('logica-usuario.php');?>
     <title>Sistema de compartilhamento Pokémon</title>
     <meta charset="utf-8">
+    <link rel="shortcut icon" href="imagens/favicon-pokeball.ico" />
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/loja.css" rel="stylesheet" />
 </head>

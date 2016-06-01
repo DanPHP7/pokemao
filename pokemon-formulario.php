@@ -18,9 +18,30 @@
 			<td><input class="form-control" type="text" name="nome"></td>
 		</tr>
 		<tr>
-			<td>Pokémon 01</td>
+			<td>URL da imagem</td>
+			<td><input class="form-control" type="text" name="imagem"></td>
+		</tr>
+		<tr>
+			<td>Descrição</td>
+			<td><input class="form-control" type="text" name="descricao"></td>
+		</tr>
+		<tr>
+			<td>Tipo 1</td>
     		<td>
     			<select name="tipo1" class="form-control">
+    					<option value="0">Selecione um tipo</option>
+	        		<?php foreach($categorias as $categoria) : ?>
+	        			<option value="<?=$categoria['Id']?>">
+	        				<?=$categoria['Descricao']?>
+	        			</option>
+	        		<?php endforeach ?>
+        		</select>
+    		</td>
+		</tr>
+		<tr>
+			<td>Tipo 2 (opcional)</td>
+    		<td>
+    			<select name="tipo2" class="form-control">
     					<option value="0">Selecione um tipo</option>
 	        		<?php foreach($categorias as $categoria) : ?>
 	        			<option value="<?=$categoria['Id']?>">
