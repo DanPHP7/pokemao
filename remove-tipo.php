@@ -6,9 +6,9 @@
 
 
 	$id = $_POST['id'];
-	removePokemon($conexao, $id);
+	removeTipo($conexao, $id);
 
-	header("Location: lista-pokemon.php?removido=true");
+	header("Location: lista-tipo.php?removido=true");
 	die();
 
 

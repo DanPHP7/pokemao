@@ -45,8 +45,22 @@
 		return $pokemons;
 	}
 
-	function removeProduto($conexao, $id) {
+	function listaTipos ($conexao){
+		$tipos = array();
+		$resultado = mysqli_query($conexao, "SELECT id, descricao, cor FROM tipo");
+		while($tipo = mysqli_fetch_assoc($resultado)){
+			array_push($tipos, $tipo);
+		}
+		return $tipos;
+	}
+
+	function removePokemon($conexao, $id) {
 		$query = "DELETE FROM pokemon WHERE id = {$id}";
+		return mysqli_query($conexao, $query);
+	}
+
+	function removeTipo($conexao, $id) {
+		$query = "DELETE FROM tipo WHERE id = {$id}";
 		return mysqli_query($conexao, $query);
 	}
 /*

@@ -20,9 +20,11 @@
                 <li><a href="tipo-formulario.php">Adicionar Tipo</a></li>
                 <li><a href="pokemon-formulario.php">Adicionar Pokémon</a></li>
                 <li><a href="time-formulario.php">Criar Time</a></li>
-                <li><a href="lista-produto.php">Pokémons</a></li>
+                <li><a href="lista-pokemon.php">Pokémons</a></li>
+                <li><a href="lista-tipo.php">Tipos</a></li>
             </ul>
         </div>
+        <div>
         <?php 
 
                 if(usuarioEstaLogado()) { ?>
@@ -32,9 +34,7 @@
                             </ul>
                          </div>
         <?php  }?>
-
-        
-    </div>
+        </div>
 
     <div class="container">
-    	<div class="principal">
+    <div class="principal">
