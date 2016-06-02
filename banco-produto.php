@@ -36,7 +36,7 @@
 		return $produtos;
 	}
 */
-	function listaPokemons ($conexao){
+	function listaPokemon ($conexao){
 		$pokemons = array();
 		$resultado = mysqli_query($conexao, "SELECT id,nome, imagem, descricao, tipo1, tipo2 FROM pokemon");
 		while($pokemon = mysqli_fetch_assoc($resultado)){
@@ -77,8 +77,14 @@
 	    return mysqli_fetch_assoc($resultado);
 	}
 
-	function alteraProduto($conexao, $id, $nome, $preco, $descricao, $categoria_id, $usado) {
+	/*function alteraProduto($conexao, $id, $nome, $preco, $descricao, $categoria_id, $usado) {
 	    $query = "update produtos set nome = '{$nome}', preco = {$preco}, descricao = '{$descricao}', 
 	        categoria_id= {$categoria_id}, usado = {$usado} where id = '{$id}'";
+	    return mysqli_query($conexao, $query);
+	}*/
+
+	function alteraPokemon($conexao, $id, $nome, $imagem, $descricao, $tipo1, $tipo2) {
+	    $query = "update pokemon set nome = '{$nome}', imagem = '{$imagem}', descricao = '{$descricao}', 
+	        tipo1= {$tipo1}, tipo2 = {$tipo2} where id = '{$id}'";
 	    return mysqli_query($conexao, $query);
 	}

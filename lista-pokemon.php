@@ -19,7 +19,7 @@
 
 
 <?php
-	$pokemons = listaPokemons($conexao);
+	$pokemons = listaPokemon($conexao);
 ?>
 
 <table class="table table-striped table-bordered">
@@ -33,9 +33,9 @@
 			<td><?= substr($pokemon['descricao'], 0, 40) ?></td>
 			<td><?= $pokemon['tipo1'] ?></td>
 			<td><?= $pokemon['tipo2'] ?></td>
-			<td><a class="btn btn-primary" href="produto-altera-formulario">alterar</a>
+			<td><a class="btn btn-primary" href="pokemon-altera-formulario.php">alterar</a>
 			<td>
-				<form action="remove-produto.php" method="post">
+				<form action="remove-pokemon.php" method="post">
 				 	<input type="hidden" name="id" value="<?=$pokemon['id']?>" />
 					<button class="btn btn-danger">remover</button>
 				</form>
