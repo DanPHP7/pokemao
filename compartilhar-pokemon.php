@@ -34,3 +34,4 @@
 		echo "Ocorreu um erro inesperado.";
 		exit;
 	}
+	

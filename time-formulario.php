@@ -6,7 +6,13 @@
 
 	verificaUsuario();
 
-	$categorias = listaPokemons($conexao);
+	$pokemons = listaPokemons($conexao);
+    $categorias = listaCategorias($conexao);
+    $listaCateg = array();
+    $listaCateg[0] = "Churros transparent";
+    foreach ($categorias as $categoria):
+    	$listaCateg[$categoria['Id']] = $categoria['Descricao'] . " #" . $categoria['Cor'];
+    endforeach
 
 ?>
 
@@ -26,13 +32,35 @@
 			<div class="select-arrow">&#9660;</div>
 		</div>
 		<div class="all-options hidden">
-			<?php foreach($categorias as $categoria) : ?>
+			<?php foreach($pokemons as $pokemon) : ?>
 				<div class="single-option">
-					<div class="imagem"><img src="<?=$categoria['Imagem']?>"></div>
+					<div class="imagem"><img src="<?=$pokemon['Imagem']?>"></div>
 					<div class="dados">
-						<div class="codigo"><?=$categoria['Id']?></div>
-						<div class="nome"><?=$categoria['Nome']?></div>
-						<div class="tipos"><span style="background:#F08030"><?=$categoria['tipo1']?></span> <span style="background:#A890F0"><?=$categoria['tipo2']?></span></div>
+						<div class="codigo"><?=$pokemon['Id']?></div>
+						<div class="nome"><?=$pokemon['Nome']?></div>
+						<div class="tipos">
+							<?php
+								if (array_key_exists($pokemon['tipo1'], $listaCateg)) {
+									$nome = Explode(" ",$listaCateg[$pokemon['tipo1']]);
+									$primeiro_nome = $nome[0];
+									$segundo_nome = $nome[1];
+								    echo '<span style="background:'.$segundo_nome.'">'.$primeiro_nome.'</span>';
+								} else {
+								    echo "Tipo deletado ";
+								}
+
+								if (array_key_exists($pokemon['tipo2'], $listaCateg)) {
+									$nome = Explode(" ",$listaCateg[$pokemon['tipo2']]);
+									$primeiro_nome = $nome[0];
+									$segundo_nome = $nome[1];
+									if ($segundo_nome != "transparent") {
+								    	echo ' <span style="background:'.$segundo_nome.'">'.$primeiro_nome.'</span>';
+									}
+								} else {
+								    echo "Tipo deletado ";
+								}
+							?>
+						</div>
 					</div>
 				</div>		
     		<?php endforeach ?>

@@ -77,6 +77,17 @@
 	    return mysqli_fetch_assoc($resultado);
 	}
 
+	function buscaPokemonTipo1($conexao) {
+	    $query = "select pokemon.Id EXIBEID, pokemon.Nome EXIBENOME, pokemon.Imagem EXIBEIMAGEM, pokemon.Descricao EXIBEDESCRICAO, tipo.Descricao EXIBEDESCR from pokemon inner join tipo on pokemon.tipo1=tipo.Id";
+	    $resultado = mysqli_query($conexao, $query);
+	    return mysqli_fetch_assoc($resultado);
+	}
+	function buscaPokemonTipo2($conexao) {
+	    $query = "select tipo.Descricao DESCR from pokemon inner join tipo on pokemon.tipo2=tipo.Id";
+	    $resultado = mysqli_query($conexao, $query);
+	    return mysqli_fetch_assoc($resultado);
+	}
+
 	/*function alteraProduto($conexao, $id, $nome, $preco, $descricao, $categoria_id, $usado) {
 	    $query = "update produtos set nome = '{$nome}', preco = {$preco}, descricao = '{$descricao}', 
 	        categoria_id= {$categoria_id}, usado = {$usado} where id = '{$id}'";
@@ -84,7 +95,8 @@
 	}*/
 
 	function alteraPokemon($conexao, $id, $nome, $imagem, $descricao, $tipo1, $tipo2) {
-	    $query = "update pokemon set nome = '{$nome}', imagem = '{$imagem}', descricao = '{$descricao}', 
-	        tipo1= {$tipo1}, tipo2 = {$tipo2} where id = '{$id}'";
+	    $query = "update pokemon set Nome = '{$nome}', Imagem = '{$imagem}', Descricao = '{$descricao}', 
+	        tipo1= {$tipo1}, tipo2 = {$tipo2} where Id = '{$id}'";
 	    return mysqli_query($conexao, $query);
 	}
+	

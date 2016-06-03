@@ -35,3 +35,4 @@
 	function logout(){
 		session_destroy();
 	}
+	

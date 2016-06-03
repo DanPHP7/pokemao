@@ -10,6 +10,13 @@
 	    return $categorias;
 	}
 
+	function buscaTipo($conexao, $id) {
+	    $query = "select * from tipo where Id = {$id}";
+	    $resultado = mysqli_query($conexao, $query);
+	    return mysqli_fetch_assoc($resultado);
+	}
+
+
 	function listaPokemons($conexao) {
 	    $categorias = array();
 	    $query = "SELECT * FROM pokemon";
@@ -18,4 +25,9 @@
 	        array_push($categorias, $categoria);
 	    }
 	    return $categorias;
+	}
+	
+	function alteraTipo($conexao, $id, $nome, $descricao) {
+	    $query = "update tipo set Descricao = '{$nome}', Cor = '{$descricao}' where Id = '{$id}'";
+	    return mysqli_query($conexao, $query);
 	}

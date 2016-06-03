@@ -28,3 +28,4 @@
 		$query = "DELETE FROM usuario WHERE UserID = {$UserID}";
 		return mysqli_query($conexao, $query);
 	}
+	

@@ -30,7 +30,12 @@
  		<tr>
 			<td><?= $tipo['descricao'] ?></td>
 			<td><?= $tipo['cor'] ?></td>
-			<td><a class="btn btn-primary" href="produto-altera-formulario">alterar</a>
+			<td>
+				<form action="tipo-altera-formulario.php" method="post">
+				 	<input type="hidden" name="id" value="<?=$tipo['id']?>" />
+					<button class="btn btn-primary">alterar</button>
+				</form>
+			</td>
 			<td>
 				<form action="remove-tipo.php" method="post">
 				 	<input type="hidden" name="id" value="<?=$tipo['id']?>" />
