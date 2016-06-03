@@ -8,6 +8,8 @@
     <link href="css/loja.css" rel="stylesheet" />
 </head>
 
+<script src="js/valida-formularios.js" type="text/javascript"></script>
+
 <body>
 
     <div class="navbar navbar-default navbar-fixed-top">

@@ -8,7 +8,7 @@
 ?>
 
 <h1>Adicionar Tipo</h1>
-<form action="adiciona-tipo.php" method="POST">
+<form action="adiciona-tipo.php" method="POST" name="ftipo" onsubmit="return validarTipo()">
 	<table class="table table-responsive">
 		<tr>
 			<td>Nome</td>
@@ -19,7 +19,10 @@
 			<td><input class="form-control" type="text" name="cor"></td>
 		</tr>
 		<tr>
-			<td><input class="btn btn-primary" type="submit" value="Cadastrar"></td>
+			<td>
+				<!--<button class="btn btn-primary">Cadastrar</button>-->
+				<input class="btn btn-primary" type="submit" value="Cadastrar">
+			</td>
 		</tr>
 	</table>
 </form>

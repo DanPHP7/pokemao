@@ -11,7 +11,7 @@
 ?>
 
 <h1>Adicionar Pokémon</h1>
-<form action="adiciona-pokemon.php" method="POST">
+<form action="adiciona-pokemon.php" method="POST" name="fpokemon" onsubmit="return validarPokemon()">
 	<table class="table table-responsive">
 		<tr>
 			<td>Nome</td>

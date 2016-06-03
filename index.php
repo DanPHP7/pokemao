@@ -26,7 +26,7 @@
 	<p> "Sistema para Compartilhamento de Pokémons"</p>
 
 	<h2>Login</h2>
-	<form action="login.php" method="post">
+	<form action="login.php" method="post" name="flogin" onsubmit="return validarLogin()">
 			<div class="form-horizontal col-md-offset-1">
 				<div class="form-group col-md-12">
 					<div class="col-md-4">

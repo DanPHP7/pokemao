@@ -8,7 +8,7 @@
     $tipo = buscaTipo($conexao, $id);
 ?>            
     <h1>Alterando tipo</h1>
-    <form action="altera-tipo.php" method="post">
+    <form action="altera-tipo.php" method="post" name="falterarTipo" onsubmit="return validarAlterarTipo()">
         <input type="hidden" name="id" value="<?=$tipo['Id']?>" />
         <table class="table">
             <tr>

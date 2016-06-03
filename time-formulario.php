@@ -18,7 +18,7 @@
 
 <h1>Criar Time</h1>
 
-<form action="adiciona-time.php" method="POST">
+<form action="adiciona-time.php" method="POST" name="ftime" onsubmit="return validarTime()">
 	<table class="table table-responsive">
 		<tr>
 			<td>Nome do Time</td>

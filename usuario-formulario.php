@@ -18,7 +18,7 @@
 		<a href="http://md5encryption.com/" target="_blank">http://md5encryption.com/</a>
 	</p>
 </div>
-<form action="adiciona-usuario.php" method="POST">
+<form action="adiciona-usuario.php" method="POST" name="fusuario" onsubmit="return validarUsuario()">
 	<table class="table table-responsive">
 		<tr>
 			<td>Nome</td>

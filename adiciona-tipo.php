@@ -12,12 +12,12 @@
 
 	if(insereTipo($conexao, $nome, $cor)) :
 ?>
-		<p class="text-success">Produto <?= $nome; ?>, <?= $cor; ?> adicionado com sucesso!</p>
+		<p class="text-success">Tipo <?= $nome; ?>, <?= $cor; ?> adicionado com sucesso!</p>
 <?php
 	else :
     	$msg = mysqli_error($conexao);
 ?>
-		<p class="text-danger">O produto <?= $nome; ?> não foi adicionado: <?= $msg ?></p>
+		<p class="text-danger">O tipo <?= $nome; ?> não foi adicionado: <?= $msg ?></p>
 <?php
 	endif
 ?>

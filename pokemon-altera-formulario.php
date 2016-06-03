@@ -9,7 +9,7 @@
     $categorias = listaCategorias($conexao);
 ?>            
     <h1>Alterando pokémon</h1>
-    <form action="altera-pokemon.php" method="post">
+    <form action="altera-pokemon.php" method="post" name="falteraPokemon" onsubmit="return validarAlteraPokemon()">
         <input type="hidden" name="id" value="<?=$pokemon['Id']?>" />
         <table class="table">
             <tr>

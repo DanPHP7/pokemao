@@ -28,4 +28,9 @@
 		$query = "DELETE FROM usuario WHERE UserID = {$UserID}";
 		return mysqli_query($conexao, $query);
 	}
+
+	function alteraUsuario($conexao, $UserID, $UserName, $Senha, $Administrador) {
+	    $query = "UPDATE usuario SET UserName = '{$UserName}', Senha = '{$Senha}', Administrador = '{$Administrador}' WHERE UserID = '{$UserID}'";
+	    return mysqli_query($conexao, $query);
+	}
 	
