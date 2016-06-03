@@ -13,8 +13,9 @@
     <div class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-            	<a href="index.php" class="navbar-brand">Index Pokemao</a></div>
-        	</div>
+            	<a href="index.php" class="navbar-brand">Index Pokemao</a>
+            </div>
+        </div>
         <div>
             <ul class="nav navbar-nav">
                 <li><a href="tipo-formulario.php">Adicionar Tipo</a></li>
@@ -37,6 +38,7 @@
                          </div>
         <?php  }?>
         </div>
+    </div>
 
     <div class="container">
     <div class="principal">
