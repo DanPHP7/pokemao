@@ -30,7 +30,13 @@
 		</tr>
 		<tr>
 			<td>Administrador?</td>
-			<td><input class="form-control" type="text" name="Administrador"></td>
+			<td>
+				<!--<input class="form-control" type="text" name="Administrador">-->
+				<select name="Administrador" class="form-control">
+					<option value="0">Usuário</option>
+					<option value="1">Administrador</option>
+				</select>
+			</td>
 		</tr>
 		<tr>
 			<td><input class="btn btn-primary" type="submit" value="Cadastrar"></td>

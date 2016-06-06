@@ -46,15 +46,9 @@ function validarPokemon(){
 		return false;
 	}
 
-	if(document.fpokemon.tipo1.value == ""){// Para funcionar deve-se tirar o value 0 do tipo1
-		alert("Campo tipo1 não pode ser vazio.");
+	if(document.fpokemon.tipo1.value == "0"){
+		alert("Campo tipo 1 não pode ser vazio.");
 		document.fpokemon.tipo1.focus();
-		return false;
-	}
-
-	if(document.fpokemon.tipo2.value == ""){
-		alert("Campo tipo2 não pode ser vazio.");
-		document.fpokemon.tipo2.focus();
 		return false;
 	}
 }
@@ -106,8 +100,8 @@ function validarAlteraPokemon(){
 		return false;
 	}
 
-	if(document.falteraPokemon.tipo1.value == ""){// Para funcionar deve-se tirar o value 0 do tipo1
-		alert("Campo tipo1 não pode ser vazio.");
+	if(document.falteraPokemon.tipo1.value == "0" ){
+		alert("Campo Tipo 1 não pode ser vazio.");
 		document.falteraPokemon.tipo1.focus();
 		return false;
 	}

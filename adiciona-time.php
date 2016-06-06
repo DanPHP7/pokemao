@@ -22,7 +22,7 @@
 	else :
     	$msg = mysqli_error($conexao);
 ?>
-		<p class="text-danger">O time <?= $nome; ?> não foi adicionado: <?= $usuario ?></p>
+		<p class="text-danger">Escolha 6 pokémons! <br/>O time <?= $nome; ?> não foi adicionado.</p>
 <?php
 	endif
 ?>
