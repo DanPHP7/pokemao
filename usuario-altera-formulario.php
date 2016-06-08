@@ -5,7 +5,7 @@
     include("banco-usuario.php");
 
     $UserID = $_POST['UserID'];
-    $usuario = buscaUsuario($conexao, $UserName, $Senha);
+    $usuario = exibeUsuario($conexao, $UserID);
 
 ?>            
     <h1>Alterando usuário</h1>
@@ -19,7 +19,7 @@
             </tr>
             <tr>
                 <td>Senha</td>
-                <td><input class="form-control" type="text" name="Senha" value="<?=$usuario['Senha']?>"></td>
+                <td><input class="form-control" type="text" name="Senha" value=""></td>
             </tr>
             <tr>
                 <td>Administrador?</td>

@@ -31,7 +31,11 @@
 			<td><?= $usuario['UserName'] ?></td>
 			<td><?= $usuario['Senha'] ?></td>
 			<td><?= $usuario['Administrador'] ?></td>
-			<td><a class="btn btn-primary" href="usuario-altera-formulario.php">alterar</a>
+			<td>
+			<form action="usuario-altera-formulario.php" method="post">
+			 	<input type="hidden" name="UserID" value="<?=$usuario['UserID']?>" />
+				<button class="btn btn-primary">alterar</button>
+			</form>	
 			<td>
 				<form action="remove-usuario.php" method="post">
 				 	<input type="hidden" name="UserID" value="<?=$usuario['UserID']?>" />

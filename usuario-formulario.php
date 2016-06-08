@@ -12,12 +12,6 @@
 
 <h1>Adicionar Usuário</h1>
 
-<div class="maisEspaco">
-	<p>
-		Criar Senha Criptografada: 
-		<a href="http://md5encryption.com/" target="_blank">http://md5encryption.com/</a>
-	</p>
-</div>
 <form action="adiciona-usuario.php" method="POST" name="fusuario" onsubmit="return validarUsuario()">
 	<table class="table table-responsive">
 		<tr>
@@ -26,7 +20,7 @@
 		</tr>
 		<tr>
 			<td>Senha</td>
-			<td><input class="form-control" type="text" name="Senha"></td>
+			<td><input class="form-control" type="password" name="Senha"></td>
 		</tr>
 		<tr>
 			<td>Administrador?</td>

@@ -15,7 +15,7 @@
     <div class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-            	<a href="index.php" class="navbar-brand">Index Pokemao</a>
+            	<a href="index.php" class="navbar-brand">Sistema para compartilhamento de times de Pokémons</a>
             </div>
         </div>
         <div>
@@ -27,6 +27,7 @@
                 <li><a href="lista-pokemon.php">Pokémons</a></li>
                 <li><a href="lista-tipo.php">Tipos</a></li>
                 <li><a href="lista-usuario.php">Usuarios</a></li>
+                <li><a href="form_compartilhar_e_compartilhados.php">Times</a></li>
             </ul>
         </div>
         <div>

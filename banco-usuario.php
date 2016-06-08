@@ -8,6 +8,24 @@
 		return $usuario;
 	}
 
+	function temUsuario($conexao, $UserName){
+		$query = "select * from usuario where UserName='{$UserName}'";
+		$resultado = mysqli_query($conexao, $query);
+		$numero = mysqli_num_rows($resultado);
+		if($numero==0){
+			return false;
+		} else {
+			return true;
+		}
+	}
+
+	function exibeUsuario($conexao, $UserID){
+		$query = "select * from usuario where UserID='{$UserID}'";
+		$resultado = mysqli_query($conexao, $query);
+		$usuario = mysqli_fetch_assoc($resultado); // mysqli_fetch_assoc tras o primeiro
+		return $usuario;
+	}
+
 	function listaUsuarios ($conexao){
 		$usuarios = array();
 		$resultado = mysqli_query($conexao, "SELECT UserID, UserName, Senha, Administrador FROM usuario");
