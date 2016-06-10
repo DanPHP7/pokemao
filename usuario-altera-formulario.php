@@ -4,7 +4,7 @@
     include("banco-produto.php");
     include("banco-usuario.php");
 
-    $UserID = $_POST['UserID'];
+    $UserID = $_SESSION['id_user'];
     $usuario = exibeUsuario($conexao, $UserID);
 
 ?>            
@@ -23,15 +23,16 @@
             </tr>
             <tr>
                 <td>Administrador?</td>
-                <td>
-                    <select name="Administrador" class="form-control">
-                        <option value="0">Usuário</option>
-                        <option value="1">Administrador</option>
-                    </select>
+                <td><?php
+                    if($usuario['Administrador']=="0"){
+                        echo "Usuário";
+                    } else {
+                        echo "Administrador";
+                    } ?>
                 </td>
             </tr>
             <tr>
-                <td>
+                <td colspan="2">
                     <button class="btn btn-primary" type="submit">Alterar</button>
                 </td>
             </tr>

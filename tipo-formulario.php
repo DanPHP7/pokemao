@@ -1,9 +1,14 @@
-<?php  
+<?php
 
 	include("cabecalho.php");
 	include("conecta.php");
 
 	verificaUsuario();
+
+	$redirect = "index.php";
+	if($_SESSION['tipo_usuario']=="0"){
+		header("location:$redirect");
+	}
 
 ?>
 

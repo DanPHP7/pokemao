@@ -6,6 +6,11 @@
 
 	verificaUsuario();
 
+	$redirect = "index.php";
+	if($_SESSION['tipo_usuario']=="0"){
+		header("location:$redirect");
+	}
+
 	$categorias = listaCategorias($conexao);
 
 ?>

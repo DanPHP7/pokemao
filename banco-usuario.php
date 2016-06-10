@@ -47,8 +47,13 @@
 		return mysqli_query($conexao, $query);
 	}
 
-	function alteraUsuario($conexao, $UserID, $UserName, $Senha, $Administrador) {
-	    $query = "UPDATE usuario SET UserName = '{$UserName}', Senha = '{$Senha}', Administrador = '{$Administrador}' WHERE UserID = '{$UserID}'";
+	function alteraUsuario($conexao, $UserID, $UserName, $Senha) {
+	    $query = "UPDATE usuario SET UserName = '{$UserName}', Senha = '{$Senha}' WHERE UserID = '{$UserID}'";
+	    return mysqli_query($conexao, $query);
+	}
+
+	function alteraUsuarioAdministrador($conexao, $UserID, $Administrador) {
+		$query = "UPDATE usuario SET Administrador = '{$Administrador}' WHERE UserID = '{$UserID}'";
 	    return mysqli_query($conexao, $query);
 	}
 	

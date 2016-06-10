@@ -1,0 +1,17 @@
+---------------------------------------------------------------------------------------
+Tarefas para fazer
+---------------------------------------------------------------------------------------
+
+#Duas páginas de times diferentes, uma de adm e outra de usuário, o adm ve todos os times do sistema.
+#alterar e excuir times
+
+
+---------------------------------------------------------------------------------------
+Tarefas Feitas
+---------------------------------------------------------------------------------------
+
+#Mudar o zero para usuario normal na tela listar;
+#O adm nao poder ver senha no listar usuário;
+#O adm só ve e remove e o usuário apenas consegue editar a propria pagina, e mudar o tipo dos usuários. Não pode editar pelo input text usar label.
+#Se for usuário ai quando clica em usuários só aparece o alterar seus próprios dados.
+#Um usuário não pode ver algumas paginas.

@@ -5,6 +5,11 @@
 
 	verificaUsuario();
 
+	$redirect = "index.php";
+	if($_SESSION['tipo_usuario']=="0"){
+		header("location:$redirect");
+	}
+
 ?>
 
 <?php
@@ -29,13 +34,23 @@
  ?>
  		<tr>
 			<td><?= $usuario['UserName'] ?></td>
-			<td><?= $usuario['Senha'] ?></td>
-			<td><?= $usuario['Administrador'] ?></td>
 			<td>
-			<form action="usuario-altera-formulario.php" method="post">
-			 	<input type="hidden" name="UserID" value="<?=$usuario['UserID']?>" />
-				<button class="btn btn-primary">alterar</button>
-			</form>	
+				<?php  
+					if ($usuario['Administrador'] == "0"){
+						echo "Usuário";
+					}else{
+						echo "Administrador";
+					}
+				?>
+			</td>
+
+
+			<td>
+				<form action="administrador-altera-formulario.php" method="post">
+				 	<input type="hidden" name="UserID" value="<?=$usuario['UserID']?>" />
+					<button class="btn btn-primary">alterar</button>
+				</form>
+			</td>	
 			<td>
 				<form action="remove-usuario.php" method="post">
 				 	<input type="hidden" name="UserID" value="<?=$usuario['UserID']?>" />

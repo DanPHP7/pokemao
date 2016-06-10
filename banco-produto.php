@@ -100,3 +100,11 @@
 	    return mysqli_query($conexao, $query);
 	}
 	
+	function listaMeusTimes($conexao, $id){
+		$tipos = array();
+		$resultado = mysqli_query($conexao, "SELECT Nome, poke1, poke2, poke3, poke4, poke5, poke6 FROM team WHERE UserId = {$id}");
+		while($tipo = mysqli_fetch_assoc($resultado)){
+			array_push($tipos, $tipo);
+		}
+		return $tipos;
+	}
