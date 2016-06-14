@@ -16,7 +16,7 @@
 	<table class="table table-responsive">
 		<tr>
 			<td>Codigo do amigo</td>
-			<td><input class="form-control" type="text" name="amigo"></td>
+			<td><input class="form-control" type="text" name="amigo" pattern="[0-9]+$"></td>
 		</tr>
 		<tr>
 			<td colspan="2"><input class="btn btn-primary" type="submit" value="Compartilhar!"></td>

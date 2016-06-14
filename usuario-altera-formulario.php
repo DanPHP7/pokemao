@@ -19,7 +19,7 @@
             </tr>
             <tr>
                 <td>Senha</td>
-                <td><input class="form-control" type="text" name="Senha" value=""></td>
+                <td><input class="form-control" type="password" name="Senha" value=""></td>
             </tr>
             <tr>
                 <td>Administrador?</td>

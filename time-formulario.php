@@ -50,7 +50,7 @@
 								}
 
 								if (array_key_exists($pokemon['tipo2'], $listaCateg)) {
-										
+									$nome = Explode(" ",$listaCateg[$pokemon['tipo2']]);	
 									$primeiro_nome = $nome[0];
 									$segundo_nome = $nome[1];
 									if ($segundo_nome != "transparent") {
