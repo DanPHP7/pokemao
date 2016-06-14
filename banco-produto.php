@@ -7,6 +7,13 @@
 	    return $resultadoDaInsercao;
 	}
 
+	function insereCompartilha($conexao, $time, $amigo) {
+		$query = "INSERT INTO timecompartilhado (UserId, IdTime) VALUES ('{$amigo}', '{$time}')";
+	    $resultadoDaInsercao = mysqli_query($conexao, $query);
+
+	    return $resultadoDaInsercao;
+	}
+
 	function insereTime($conexao, $usuario, $nome, $pokemon1, $pokemon2, $pokemon3, $pokemon4, $pokemon5, $pokemon6) {
 		$query = "INSERT INTO team (UserId, Nome, poke1, poke2, poke3, poke4, poke5, poke6, CreateAt) VALUES ('{$usuario}', '{$nome}', '{$pokemon1}', '{$pokemon2}', '{$pokemon3}', '{$pokemon4}', '{$pokemon5}', '{$pokemon6}', CURDATE())";
 	    $resultadoDaInsercao = mysqli_query($conexao, $query);
@@ -59,6 +66,11 @@
 		return mysqli_query($conexao, $query);
 	}
 
+	function removeTime($conexao, $id) {
+		$query = "DELETE FROM team WHERE Id = {$id}";
+		return mysqli_query($conexao, $query);
+	}
+
 	function removeTipo($conexao, $id) {
 		$query = "DELETE FROM tipo WHERE id = {$id}";
 		return mysqli_query($conexao, $query);
@@ -100,9 +112,32 @@
 	    return mysqli_query($conexao, $query);
 	}
 	
+	function alteraTime($conexao, $id, $nome, $poke1, $poke2, $poke3, $poke4, $poke5, $poke6) {
+	    $query = "update team set Nome = '{$nome}', poke1 = '{$poke1}', poke2 = '{$poke2}', poke3 = '{$poke3}', poke4 = '{$poke4}', poke5 = '{$poke5}', poke6 = '{$poke6}' where Id = '{$id}'";
+	    return mysqli_query($conexao, $query);
+	}
+	
 	function listaMeusTimes($conexao, $id){
 		$tipos = array();
-		$resultado = mysqli_query($conexao, "SELECT Nome, poke1, poke2, poke3, poke4, poke5, poke6 FROM team WHERE UserId = {$id}");
+		$resultado = mysqli_query($conexao, "SELECT Id, Nome, poke1, poke2, poke3, poke4, poke5, poke6 FROM team WHERE UserId = {$id}");
+		while($tipo = mysqli_fetch_assoc($resultado)){
+			array_push($tipos, $tipo);
+		}
+		return $tipos;
+	}
+	
+	function listaOutrosTimes($conexao, $id){
+		$tipos = array();
+		$resultado = mysqli_query($conexao, "SELECT UserId, IdTime FROM timecompartilhado WHERE UserId = {$id}");
+		while($tipo = mysqli_fetch_assoc($resultado)){
+			array_push($tipos, $tipo);
+		}
+		return $tipos;
+	}
+	
+	function listaTimes($conexao, $id){
+		$tipos = array();
+		$resultado = mysqli_query($conexao, "SELECT Id, Nome, poke1, poke2, poke3, poke4, poke5, poke6 FROM team");
 		while($tipo = mysqli_fetch_assoc($resultado)){
 			array_push($tipos, $tipo);
 		}

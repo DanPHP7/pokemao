@@ -10,6 +10,12 @@
 	    return $categorias;
 	}
 
+	function buscaTime($conexao, $id) {
+	    $query = "select * from team where Id = {$id}";
+	    $resultado = mysqli_query($conexao, $query);
+	    return mysqli_fetch_assoc($resultado);
+	}
+
 	function buscaTipo($conexao, $id) {
 	    $query = "select * from tipo where Id = {$id}";
 	    $resultado = mysqli_query($conexao, $query);

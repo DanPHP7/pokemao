@@ -13,7 +13,7 @@ body {
 	margin: 30px auto 0;
 }
 .select-option {
-	border: 1px solid #bbb;
+	border: 1px solid #ddd;
 	padding: 15px;
 	border-radius: 3px;
 	position: relative;
@@ -28,15 +28,16 @@ body {
 	position: absolute;
 	width: 46px;
 	height: 50px;
-	border: 1px solid #d5d5d5;
 	top:  0px;
 	right: 0px;
     text-align: center;
     line-height: 46px;
-    background: -webkit-linear-gradient(#fff, #ddd); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#fff, #ddd); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#fff, #ddd); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#fff, #ddd); /* Standard syntax */
+	border-radius: 0 2px 2px 0;
+	color:#fff;
+    background: -webkit-linear-gradient(#ff6b6b, #ec4646); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#ff6b6b, #ec4646); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#ff6b6b, #ec4646); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#ff6b6b, #ec4646); /* Standard syntax */
 }
 .all-options {
 	position: absolute;
@@ -44,11 +45,12 @@ body {
 	width: 498px;
 	height: 285px;
 	overflow-y: scroll;
-	border: 1px solid #b5b5b5;
+	border: 1px solid #ddd;
 	border-radius: 0 0 3px 3px;
 	z-index: 1;
 	padding-top: 10px;
 	transition: all ease 0.7s;
+	background:#fff;
 }
 .hidden {
 	height: 0px;

@@ -24,7 +24,7 @@
 			<td><input class="form-control" type="text" name="cor"></td>
 		</tr>
 		<tr>
-			<td>
+			<td colspan="2">
 				<!--<button class="btn btn-primary">Cadastrar</button>-->
 				<input class="btn btn-primary" type="submit" value="Cadastrar">
 			</td>

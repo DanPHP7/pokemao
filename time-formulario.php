@@ -18,11 +18,11 @@
 
 <h1>Criar Time</h1>
 
-<form action="adiciona-time.php" method="POST" name="ftime" onsubmit="return validarTime()">
-	<table class="table table-responsive">
+<form action="adiciona-time.php" method="POST" name="ftime" onsubmit="return validarTime()" style="width:520px; margin:0 auto; border:1px solid #ccc;padding:10px;background:#fbfbfb;border-radius:6px">
+	<table class="table table-responsive"" style="border-top:0px">
 		<tr>
-			<td>Nome do Time</td>
-			<td><input class="form-control" type="text" name="nome"></td>
+			<td width="120" style="border-top:0px">Nome do Time</td>
+			<td style="border-top:0px"><input class="form-control" type="text" name="nome"></td>
 		</tr>
 	</table>
 
@@ -50,7 +50,7 @@
 								}
 
 								if (array_key_exists($pokemon['tipo2'], $listaCateg)) {
-									$nome = Explode(" ",$listaCateg[$pokemon['tipo2']]);
+										
 									$primeiro_nome = $nome[0];
 									$segundo_nome = $nome[1];
 									if ($segundo_nome != "transparent") {

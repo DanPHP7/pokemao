@@ -1,5 +1,4 @@
 <?php 
-	include('logica-usuario.php');
 	include("conecta.php");
 	
 	function validaCompartilhamento($time, $usuario){
@@ -17,7 +16,7 @@
 		if($time && $usuario){
 			$query = mysqli_query($conexao, "INSERT INTO timecompartilhado(UserId, TimeId) VALUES ({$usuario}, {$time})");
 			if($query){
-				echo "Cadastrado com sucesso";
+				echo "Compartilhado com sucesso";
 				exit;
 			}
 		}
@@ -27,7 +26,7 @@
 		if (validaCompartilhamento($time, $usuario)) {
 			$query = mysqli_query($conexao, "DELETE FROM timecompartilhado where UserId = {$usuario} and TimeId = {$time}");
 			if($query){
-				echo "Deletado";
+				echo "Não está mais compartilhando este time";
 				exit;
 			}
 		}

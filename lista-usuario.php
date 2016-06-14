@@ -27,6 +27,8 @@
 	$usuarios = listaUsuarios($conexao);
 ?>
 
+<h2 style="margin-bottom:40px">Usuários cadastrados</h2>
+
 <table class="table table-striped table-bordered">
 
 <?php 

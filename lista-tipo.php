@@ -27,6 +27,8 @@
 	$tipos = listaTipos($conexao);
 ?>
 
+<h2 style="margin-bottom:40px">Tipos de pokémon cadastrados</h2>
+
 <table class="table table-striped table-bordered">
 
 <?php 

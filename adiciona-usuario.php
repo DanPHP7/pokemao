@@ -4,11 +4,9 @@
 	include("conecta.php"); 
 	include("banco-usuario.php");
 
-	verificaUsuario();
-
 	$UserName = $_POST['UserName'];
 	$Senha = md5($_POST['Senha']);
-	$Administrador = $_POST['Administrador'];
+	$Administrador = 0;
 	if(!temUsuario($conexao, $UserName)){
 			if(insereUsuario($conexao, $UserName, $Senha, $Administrador)) {
 		?>

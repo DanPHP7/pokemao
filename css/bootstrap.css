@@ -1184,10 +1184,10 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: inherit;
+  font-family: 'Pacifico', cursive;
   font-weight: 500;
   line-height: 1.1;
-  color: inherit;
+  color: #F73E3E;
 }
 h1 small,
 h2 small,
@@ -1224,7 +1224,7 @@ h2,
 h3,
 .h3 {
   margin-top: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 h1 small,
 .h1 small,
@@ -2249,6 +2249,9 @@ pre code {
     margin-left: 0;
   }
 }
+form {
+	margin-bottom: 0;
+}
 table {
   background-color: transparent;
 }
@@ -2274,7 +2277,7 @@ th {
 .table > tfoot > tr > td {
   padding: 8px;
   line-height: 1.42857143;
-  vertical-align: top;
+  vertical-align: middle;
   border-top: 1px solid #ddd;
 }
 .table > thead > tr > th {
@@ -3986,7 +3989,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav > li > a {
   position: relative;
   display: block;
-  padding: 10px 15px;
+  padding: 10px 8px;
+}
+.nav > li > a:hover {
+	background: #FA6969 !important;
+	color: #fff !important;
 }
 .nav > li > a:hover,
 .nav > li > a:focus {
@@ -4278,7 +4285,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   float: left;
   height: 50px;
   padding: 15px 15px;
-  font-size: 18px;
+  font-size: 24px;
   line-height: 20px;
 }
 .navbar-brand:hover,
@@ -4286,7 +4293,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   text-decoration: none;
 }
 .navbar-brand > img {
-  display: block;
+  display: inline-block;
+  margin-top: -3px;
+  margin-right: 5px;
 }
 @media (min-width: 768px) {
   .navbar > .container .navbar-brand,
@@ -4363,8 +4372,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     float: left;
   }
   .navbar-nav > li > a {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 .navbar-form {
@@ -4496,11 +4505,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-default {
-  background-color: #f8f8f8;
+  background-color: #fff;
   border-color: #e7e7e7;
 }
 .navbar-default .navbar-brand {
-  color: #777;
+  color: #333;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {

@@ -4,13 +4,11 @@
 	include("conecta.php");
 	include("banco-usuario.php");
 
-	verificaUsuario();
-
 	$usuarios = listaUsuarios($conexao);
 
 ?>
 
-<h1>Adicionar Usuário</h1>
+<h1>Novo Usuário</h1>
 
 <form action="adiciona-usuario.php" method="POST" name="fusuario" onsubmit="return validarUsuario()">
 	<table class="table table-responsive">
@@ -23,17 +21,7 @@
 			<td><input class="form-control" type="password" name="Senha"></td>
 		</tr>
 		<tr>
-			<td>Administrador?</td>
-			<td>
-				<!--<input class="form-control" type="text" name="Administrador">-->
-				<select name="Administrador" class="form-control">
-					<option value="0">Usuário</option>
-					<option value="1">Administrador</option>
-				</select>
-			</td>
-		</tr>
-		<tr>
-			<td><input class="btn btn-primary" type="submit" value="Cadastrar"></td>
+			<td colspan="2"><input class="btn btn-primary" type="submit" value="Cadastrar"></td>
 		</tr>
 	</table>
 </form>

@@ -20,7 +20,7 @@
                 <td><input class="form-control" type="text" name="descricao" value="<?=$tipo['Cor']?>"></input></td>
             </tr>
             <tr>
-                <td>
+                <td colspan="2">
                     <button class="btn btn-primary" type="submit">Alterar</button>
                 </td>
             </tr>

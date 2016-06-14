@@ -29,7 +29,7 @@
 	<form action="login.php" method="post" name="flogin" onsubmit="return validarLogin()">
 			<div class="form-horizontal col-md-offset-1">
 				<div class="form-group col-md-12">
-					<div class="col-md-4">
+					<div class="col-md-2 col-md-offset-2">
 						<label>Usuario:</label>
 					</div>
 					<div class="col-md-4">
@@ -37,7 +37,7 @@
 					</div>
 				</div>
 				<div class="form-group col-md-12">
-					<div class="col-md-4">
+					<div class="col-md-2 col-md-offset-2">
 						<label>Senha:</label>
 					</div>
 					<div class="col-md-4">
@@ -45,9 +45,15 @@
 					</div>
 				</div>
 			</div>
-			<div class="form-groucol-md-12">
-					<center><button class="btn btn-primary">Login</button></center>
-					
+			<div class="form-horizontal col-md-offset-1">
+				<div class="form-group col-md-12">
+					<div class="col-md-4 col-md-offset-2" style="text-align:right">
+						Não é cadastrado? <a href="usuario-formulario.php">Registre-se</a>
+					</div>
+					<div class="col-md-2">
+						<button class="btn btn-primary">Login</button>
+					</div>
+				</div>
 			</div>
 	</form>
 <?php } ?>

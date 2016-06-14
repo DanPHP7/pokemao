@@ -55,7 +55,7 @@
                 </td>
             </tr>
             <tr>
-                <td>
+                <td colspan="2">
                     <button class="btn btn-primary" type="submit">Alterar</button>
                 </td>
             </tr>
